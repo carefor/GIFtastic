@@ -59,9 +59,22 @@
 
         // The button from the textbox is then added to our array
 
+
+        //****make case insensitive for button match
+       // for(var i = 0; i < giphys.length; i++) {
+       //    if(giphys[i].toLowerCase() === giphy.toLowerCase()) {
+       //    alert("That button already exists!");
+       //    $("#new-input").empty();
+       //    return;
+       //  }
+       //    } else if(giphy !== "") {
+       //    giphys.push(giphy);
+       //    console.log(giphys);
+       //  }
+
         if($.inArray(giphy, giphys) !== -1) {
           alert("That button already exists!");
-          $("#new-input").val("");
+          $("#new-input").empty();
           return;
         } else if(giphy !== "") {
           giphys.push(giphy);
@@ -77,6 +90,12 @@
       renderButtons();
       
 
+      //***create remove button once figure out how
+      // $("#remove-new").on("click", function(event) {
+      //   event.preventDefault();
+
+
+
       // const delegatedTarget = document.getElementById("giphys-view");
 
       // delegatedTarget.onclick = function(event) { 
@@ -87,9 +106,9 @@
       // console.log("event.target: " + event.target);
       // console.log("event.currentTarget: " + event.currentTarget); 
 
-      $(".giphy").on("click", function() { // Attaches event listener function
+      $("#giphys-view").on("click", ".giphy", function() { // Attaches event listener function
 
-          $("#gifsHere").empty();
+          $("#gifs-here").empty();
 
         var searchSubject = $(this).attr("data-name");
 
@@ -98,7 +117,7 @@
         console.log("The subject searched is: " + searchSubjectEdited);
 
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchSubjectEdited + 
-                      "&api_key=79nYgjB20sOjRJaXUazd5e3YY1o6DQ5e&limit=10";
+                      "&api_key=79nYgjB20sOjRJaXUazd5e3YY1o6DQ5e&rating=pg-13&limit=10";
 
         $.ajax({
             url: queryURL,
@@ -115,7 +134,6 @@
 
             console.log(results[i]);
 
-            var imgDiv = $("<div class='gif-container'>");
             var rating = results[i].rating;
             var p = $("<p class='rating-container'>");
             $(p).text("The rating is: " + rating);
@@ -126,19 +144,16 @@
             actualImage.attr({"data-state" : "still"});
             actualImage.attr("alt", "random image");
             actualImage.attr("id", "image-" + i);
-            $(imgDiv).append(p);
-            $(imgDiv).append(actualImage);
-
-            if (rating == "g" || "pg" || "pg-13" || "y"){
-              $("#gifs-here").prepend(imgDiv);
-            }
+            $("#gifs-here").append(p);
+            $("#gifs-here").append(actualImage);
             
           }    
       });
     });
 
-      $(".gif").on("click", function () {
+      $("#gifs-here").on("click", ".gif", function () {
         console.log("clicked");
+
         var state = $(this).attr("data-state");
           
                 
