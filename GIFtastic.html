@@ -4,25 +4,30 @@
   <meta charset="UTF-8">
    <title>The Marvelous Mood Boost Button Machine
 </title>
-   <link rel="icon" type="image/png" href="#">
+   <link rel="icon" type="image/png" href="assets/images/machine_icon.png">
+   <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
-<body>
+<body id=#background>
 
-  <div class="container">
-    <h1>Search</h1>
+  <div id="overall-container">
 
+<header>
+  <article class="mask-galaxy">
+    <h1>The Marvelous Mood Boost Button Machine</h1>
+  </article>
+</header>
     <!-- GIPHYS will get dumped here -->
     <div id="giphys-view"></div>
 
     <form id="giphy-form">
-      <label for="new-input">Add a funny show!</label>
+      <label for="new-input">Add your own mood-boosting show!</label>
       <input type="text" id="new-input" required><br>
 
       <!-- Button triggers new button to be added -->
-      <input id="add-new" type="submit" value="Add">
+      <input id="add-new" type="submit" value="Add" class="button">
 
     </form>
 

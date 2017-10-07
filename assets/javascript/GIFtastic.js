@@ -35,6 +35,7 @@
           // Then dynamically generating buttons for each butotn in the array.
           // This code $("<button>") is all jQuery needs to create the start and end tag. (<button></button>)
           var b = $("<button class='giphy'>");
+          b.addClass("button");
           // Adding a data-attribute with a value of the button at index i
           b.attr("data-name", giphys[i]);
           // Providing the button's text with a value of the button at index i
@@ -168,20 +169,39 @@
 
       
 
-      var backgroundArray= ["background1", "background2", "background3"];
+      var backgroundArray = [
+      "url(assets/images/green_1_pattern.png)", 
+      "url(assets/images/orange_2_pattern.png)", 
+      "url(assets/images/red_2_pattern.png)",
+      "url(assets/images/blue_2_pattern.png)",
+      "url(assets/images/yellow_2_pattern.png)",
+      "url(assets/images/purple_1_pattern.png)", 
+      "url(assets/images/pink_2_pattern.png)", 
+      "url(assets/images/red_1_pattern.png)",
+      "url(assets/images/pink_4_pattern.png)",
+      "url(assets/images/blue_3_pattern.png)",
+      "url(assets/images/green_3_pattern.png)", 
+      "url(assets/images/pink_1_pattern.png)", 
+      "url(assets/images/green_2_pattern.png)",
+      "url(assets/images/yellow_1_pattern.png)",
+      "url(assets/images/blue_1_pattern.png)",
+      "url(assets/images/orange_1_pattern.png)", 
+      "url(assets/images/red_3_pattern.png)", 
+      "url(assets/images/purple_2_pattern.png)",
+      "url(assets/images/pink_3_pattern.png)"
+      ];
       var backgroundIndex = 0;
 
     var rotateBackground = function(){
-    $(document).removeClass(backgroundArray.join(' '));
-    $(document).addClass(backgroundArray[backgroundIndex]);  
-    backgroundIndex++;
-    if (backgroundIndex >= backgroundArray.length){
-        backgroundIndex = 0;
+    $("body").css("background-image", backgroundArray[backgroundIndex]);
+      backgroundIndex++;
+      if (backgroundIndex >= backgroundArray.length){
+          backgroundIndex = 0;
     }
 }
 
 $(document).ready( function(){
 
-    setInterval(rotateBackground, 5000);
+    setInterval(rotateBackground, 7000);
 
 });
