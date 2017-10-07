@@ -22,7 +22,6 @@
       var i;
       var randImage;
     
-    
       // Function for displaying button data
       function renderButtons() {
 
@@ -166,3 +165,23 @@
         }
       });
           
+
+      
+
+      var backgroundArray= ["background1", "background2", "background3"];
+      var backgroundIndex = 0;
+
+    var rotateBackground = function(){
+    $(document).removeClass(backgroundArray.join(' '));
+    $(document).addClass(backgroundArray[backgroundIndex]);  
+    backgroundIndex++;
+    if (backgroundIndex >= backgroundArray.length){
+        backgroundIndex = 0;
+    }
+}
+
+$(document).ready( function(){
+
+    setInterval(rotateBackground, 5000);
+
+});
