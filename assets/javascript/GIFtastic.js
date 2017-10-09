@@ -135,7 +135,7 @@
 
             console.log(results[i]);
 
-            var gifDiv = $("<div class='gif-container'>");
+            var gifDiv = $("<div class='gif-container grow shake'>");
             var rating = results[i].rating;
             var p = $("<p class='rating-container'>");
             $(p).text("rated " + rating);
@@ -172,41 +172,41 @@
 
       
 
-      // var backgroundArray = [
-      // "url(assets/images/green_1_pattern.png)", 
-      // "url(assets/images/orange_2_pattern.png)", 
-      // "url(assets/images/red_2_pattern.png)",
-      // "url(assets/images/blue_2_pattern.png)",
-      // "url(assets/images/yellow_2_pattern.png)",
-      // "url(assets/images/purple_1_pattern.png)", 
-      // "url(assets/images/pink_2_pattern.png)", 
-      // "url(assets/images/red_1_pattern.png)",
-      // "url(assets/images/pink_4_pattern.png)",
-      // "url(assets/images/blue_3_pattern.png)",
-      // "url(assets/images/green_3_pattern.png)", 
-      // "url(assets/images/pink_1_pattern.png)", 
-      // "url(assets/images/green_2_pattern.png)",
-      // "url(assets/images/yellow_1_pattern.png)",
-      // "url(assets/images/blue_1_pattern.png)",
-      // "url(assets/images/orange_1_pattern.png)", 
-      // "url(assets/images/red_3_pattern.png)", 
-      // "url(assets/images/purple_2_pattern.png)",
-      // "url(assets/images/pink_3_pattern.png)"
-      // ];
-      // var backgroundIndex = 0;
+      var backgroundArray = [
+      "url(assets/images/green_1_pattern.png)", 
+      "url(assets/images/orange_2_pattern.png)", 
+      "url(assets/images/red_2_pattern.png)",
+      "url(assets/images/blue_2_pattern.png)",
+      "url(assets/images/yellow_2_pattern.png)",
+      "url(assets/images/purple_1_pattern.png)", 
+      "url(assets/images/pink_2_pattern.png)", 
+      "url(assets/images/red_1_pattern.png)",
+      "url(assets/images/pink_4_pattern.png)",
+      "url(assets/images/blue_3_pattern.png)",
+      "url(assets/images/green_3_pattern.png)", 
+      "url(assets/images/pink_1_pattern.png)", 
+      "url(assets/images/green_2_pattern.png)",
+      "url(assets/images/yellow_1_pattern.png)",
+      "url(assets/images/blue_1_pattern.png)",
+      "url(assets/images/orange_1_pattern.png)", 
+      "url(assets/images/red_3_pattern.png)", 
+      "url(assets/images/purple_2_pattern.png)",
+      "url(assets/images/pink_3_pattern.png)"
+      ];
+      var backgroundIndex = 0;
 
-//     var rotateBackground = function(){
-//    $("#left").css("background", backgroundArray[backgroundIndex] );
-//     $("#right").css("background", backgroundArray[backgroundIndex + 1]);
-//     //$("#gifs-here").css("background", backgroundArray[backgroundIndex + 2])
-//       backgroundIndex++;
-//       if (backgroundIndex >= backgroundArray.length){
-//           backgroundIndex = 0;
-//       }
-// }
+    var rotateBackground = function(){
+    $(".rating-container").css("background", backgroundArray[backgroundIndex]);
+    $(".gif-container").css("background", backgroundArray[backgroundIndex + 1]);
+    $(".gif").css("background", backgroundArray[backgroundIndex + 2]);
+      backgroundIndex++;
+      if (backgroundIndex >= backgroundArray.length){
+          backgroundIndex = 0;
+      }
+}
 
-// //$(document).ready( function(){
+$(document).ready( function(){
 
-//    // setInterval(rotateBackground, 5000);
+   setInterval(rotateBackground, 5000);
 
-// });
+});
