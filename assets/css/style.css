@@ -70,14 +70,14 @@ h1 {
 }
 
 .giphy:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgb(216, 4, 4);
     border: 3px solid transparent;
     color: #fff;
 }
 
 .giphy:active {
-	border-image: linear-gradient(to right, #7cffc4 0%, #09a3c6 100%);
-    background: linear-gradient(to right, #29e9bf, #09a3c6);
+    border-image: linear-gradient(to right, #26e78a 0%, #78dcf3 100%);
+    background: linear-gradient(to right, #6febce, #06a4c4);
     color: rgb(11, 49, 92);
 }
 
@@ -117,23 +117,23 @@ label {
 #add-new {
     width: 100px;
     padding: 4px;
-    font-size: 16px;
-    border-image: linear-gradient(to right, #967aec 0%, #b42af0 100%);
-    background: linear-gradient(to right, #e270b6, #aa4fe7);
+    font-size: 17px;
+    border-image: linear-gradient(to right, #ac94f8 0%, #b83ff0 100%);
+    background: linear-gradient(to right, #f391cd, #b028f0);
     border-image-slice: 1;
-    font-weight: bold;
+    font-weight: bolder;
     color: rgb(34, 6, 37);
 }
 
 #add-new:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgb(127, 7, 175);
     border-image: none;
     color: #fff;
 }
 
 #add-new:active {
-	border-image: linear-gradient(to right, #7cffc4 0%, #09a3c6 100%);
-    background: linear-gradient(to right, #29e9bf, #09a3c6);
+	border-image: linear-gradient(to right, #26e78a 0%, #78dcf3 100%);
+    background: linear-gradient(to right, #6febce, #06a4c4);
     color: rgb(11, 49, 92);
 }
 
@@ -144,7 +144,7 @@ label {
 }
 
 .rating-container {
-    color: rgba(250, 126, 188, 0.479);
+    color: rgba(250, 126, 188, 0.959);
     letter-spacing: 2px;
     padding: 5px;
     font-family: "Julius Sans One", "Helvetica", sans-serif;
