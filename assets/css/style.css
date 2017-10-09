@@ -146,5 +146,6 @@ label {
 
 .gif-container {
     float: left;
-    padding: 5px;
+    padding: 15px;
+    margin: 0 auto;
 }
