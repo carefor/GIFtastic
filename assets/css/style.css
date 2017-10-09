@@ -2,8 +2,8 @@
     box-sizing: border-box; 
 }
 
-html, body {
-    background: black;  
+body {
+    background: black;
     font-family: "Lobster", "Helvetica", sans-serif;
     min-width: 100%;
 	min-height: 100%; 
@@ -144,10 +144,12 @@ label {
 }
 
 .rating-container {
-    color: rgba(250, 126, 188, 0.959);
+    color: black;
+    background: white;
     letter-spacing: 2px;
     padding: 5px;
     font-family: "Julius Sans One", "Helvetica", sans-serif;
+    font-weight: bolder;
 }
 
 .gif-container {
