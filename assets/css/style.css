@@ -1,116 +1,113 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
-#background {
-	width: 100%;
-	height: 100%; 
+html, body {
+    background: black;  
+    font-family: "Lobster", "Helvetica", sans-serif;
+    min-width: 100%;
+	min-height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-}
-
-body {
-	width: 100%;
-	background: #40E0D0; 
-    background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);  
-    background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); 
-    font-family: "Lobster", "Helvetica", sans-serif;
-}
-
-
-#overall-container {
-	width: 75%;
-	margin-left: 30px;
-	margin-right: 30px;
-	margin-top: 30px;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 20px;
-	display: table;
-	margin: auto;
-    text-align: center;
+	background-size: cover;
+	top: 0;
+	left: 0;
 }
 
 header {
-	margin: 20px;
-	padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+.mask-rainbow {
+    background: url(https://naldzgraphics.net/wp-content/uploads/2013/03/22-colorful-beautiful-stained-glass-textures.jpg) center center;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-animation: travelRainbow 10s linear infinite;
+    -moz-animation: travelRainbow 10s linear infinite;
+    -moz-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-animation: travelRainbow 10s linear infinite;
+    -o-text-fill-color: transparent;
+    -o-background-clip: text;
+    -o-animation: travelRainbow 10s linear infinite;
+    margin: auto;
+    width: 95%;
+	height: 20%; 
+}
+
+@-webkit-keyframes travelRainbow {
+    0% {background-position: right bottom;}
+    100% {background-position: left top;}
+}
+@-moz-keyframes travelRainbow {
+    0% {background-position: right bottom;}
+    100% {background-position: left top;}
 }
 
 h1 {
     font-family: "Lobster", "Helvetica", sans-serif;
     font-size: 96px;
     font-weight: bold;
-    text-align: center;
+    height: 100%;
+    width: 100%;
 }
 
-.mask-galaxy {
-    background: url(https://naldzgraphics.net/wp-content/uploads/2013/03/22-colorful-beautiful-stained-glass-textures.jpg) center center;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-animation: travelGalaxy 10s linear infinite;
-    -moz-animation: travelGalaxy 10s linear infinite;
-    -moz-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-animation: travelGalaxy 10s linear infinite;
-    -o-text-fill-color: transparent;
-    -o-background-clip: text;
-    -o-animation: travelGalaxy 10s linear infinite;
-}
-
-@-webkit-keyframes travelGalaxy {
-    0% {background-position: right bottom;}
-    100% {background-position: left top;}
-}
-@-moz-keyframes travelGalaxy {
-    0% {background-position: right bottom;}
-    100% {background-position: left top;}
-}
-
-.button {
+.giphy, .button {
 	display: inline-block;
 	cursor: crosshair; 
     border: 3px solid transparent;
-    border-image: linear-gradient(to right, #f4a041 0%, #f4416a 100%);
+    background: linear-gradient(to right, #f4416a, #f4a041);;
+    border-image: linear-gradient(to right, #fcb66c 0%, #ee1b4c 100%);
     border-image-slice: 1;
- 	font-family: "Lobster", "Helvetica", sans-serif;
+    font-family: "Codystar", "Helvetica", cursive;
 	font-size: 16px;
-    background: rgba(255, 255, 255, 0.4);;
-    color: #0d5f72;
-    font-size: 1em;
-    padding: 10px;
+    color: rgb(244, 250, 160);
+    font-size: 18px;
+    padding: 8px;
     margin: 10px;
 }
 
-.button:hover {
-    background-color: rgba(255, 255, 255, 0.2);;
-    background: linear-gradient(to right, #f4416a, #f4a041);
+.giphy:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: 3px solid transparent;
     color: #fff;
 }
 
-.button:active {
+.giphy:active {
 	border-image: linear-gradient(to right, #7cffc4 0%, #09a3c6 100%);
-    background-color: rgba(255, 255, 255, 0.2);;
-    background: linear-gradient(to right, #09a3c6, #09a3c6);
-    color: #fff;
+    background: linear-gradient(to right, #29e9bf, #09a3c6);
+    color: rgb(11, 49, 92);
+}
+
+#giphys-view {
+    margin-bottom: 20px;
 }
 
 form {
-	padding: 10px;
-
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
 label {
-	margin: 10px;
-	font-size: 18px;
-	float: left;
+    font-size: 19px;
+    font-family: "Julius Sans One", "Helvetica", sans-serif;
+    font-weight: bold;  
+    color: rgb(35, 172, 172);
+    text-shadow: 2px 2px 5px #22A6F2;
+    margin: 0 auto;
 }
 
 #new-input {
-	margin: 10px;
-	font-size: 18px;
-	float: left;
-	clear: both;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    font-family: "Lobster", "Helvetica", sans-serif;
 }
 
 #new-input:hover {
@@ -118,25 +115,36 @@ label {
 }
 
 #add-new {
-	font-size: 16px;
-	float: left;
+    width: 100px;
+    padding: 4px;
+    font-size: 16px;
+    border-image: linear-gradient(to right, #967aec 0%, #b42af0 100%);
+    background: linear-gradient(to right, #e270b6, #aa4fe7);
+    border-image-slice: 1;
+    font-weight: bold;
+    color: rgb(34, 6, 37);
 }
 
-#giphys-view {
-	padding: 10px;
-  	margin: 10px;
+#add-new:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-image: none;
+    color: #fff;
 }
 
-
-#gifs-here {
-	padding: 10px;
-  	margin: 10px;
+#add-new:active {
+	border-image: linear-gradient(to right, #7cffc4 0%, #09a3c6 100%);
+    background: linear-gradient(to right, #29e9bf, #09a3c6);
+    color: rgb(11, 49, 92);
 }
 
-.p {
-	float: left;
+.rating-container {
+    color: rgba(250, 126, 188, 0.479);
+    letter-spacing: 2px;
+    padding: 5px;
+    font-family: "Julius Sans One", "Helvetica", sans-serif;
 }
 
-.gif {
-	float: left;
+.gif-container {
+    float: left;
+    padding: 5px;
 }

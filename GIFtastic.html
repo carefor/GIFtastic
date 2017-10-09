@@ -6,36 +6,42 @@
 </title>
    <link rel="icon" type="image/png" href="assets/images/machine_icon.png">
    <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+   <link href="https://fonts.googleapis.com/css?family=Codystar:300" rel="stylesheet">  
+   <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
-<body id=#background>
+<body>
 
-  <div id="overall-container">
+<div class="container-fluid text-center">
+  <div class="row">
+    <div class="col-sm-2" id="left"></div>
+      <div class="col-sm-8 text-center">
+        <header>
+          <article class="mask-rainbow">
+            <h1>The-Marvelous-Mood-Boost-Button-Machine</h1>
+          </article>
+        </header>
 
-<header>
-  <article class="mask-galaxy">
-    <h1>The-Marvelous-Mood-Boost-Button-Machine</h1>
-  </article>
-</header>
-    <!-- GIPHYS will get dumped here -->
-    <div id="giphys-view"></div>
+          <div id="giphys-view"></div>
 
-    <form id="giphy-form">
-      <label for="new-input">Add your own mood-boosting show!</label>
-      <input type="text" id="new-input" required><br>
+          <form id="giphy-form">
+            <label for="new-input">Add your own mood-boosting show!</label>
+            <br/>
+            <input type="text" id="new-input" required>
+            <input id="add-new" type="submit" value="Add" class="button">
+          </form>
 
-      <!-- Button triggers new button to be added -->
-      <input id="add-new" type="submit" value="Add" class="button">
+          <div id="gifs-here"></div>
+      </div>
+    <div class="col-sm-2" id="right"></div>
+  </div>
 
-    </form>
-
-    <div id="gifs-here"></div>
-
-   </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
 
   <script type="text/javascript" src="assets/javascript/GIFtastic.js"></script>
   

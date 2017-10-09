@@ -16,6 +16,7 @@
       "Summer Heights High",
       "SNL",
       "The Unbreakable Kimmy Schmidt",
+      "Reno 911"
       ];
       var giphy;
       var results;
@@ -134,9 +135,10 @@
 
             console.log(results[i]);
 
+            var gifDiv = $("<div class='gif-container'>");
             var rating = results[i].rating;
             var p = $("<p class='rating-container'>");
-            $(p).text("The rating is: " + rating);
+            $(p).text("rated " + rating);
             var actualImage = $("<img class='gif'>");
             actualImage.attr("src", results[i].images.fixed_height_still.url);
             actualImage.attr({"data-still" : results[i].images.fixed_height_still.url});
@@ -144,9 +146,10 @@
             actualImage.attr({"data-state" : "still"});
             actualImage.attr("alt", "random image");
             actualImage.attr("id", "image-" + i);
-            $("#gifs-here").append(p);
-            $("#gifs-here").append(actualImage);
-            
+            $(gifDiv).append(p);
+            $(gifDiv).append(actualImage);
+            $("#gifs-here").prepend(gifDiv);
+
           }    
       });
     });
@@ -169,39 +172,41 @@
 
       
 
-      var backgroundArray = [
-      "url(assets/images/green_1_pattern.png)", 
-      "url(assets/images/orange_2_pattern.png)", 
-      "url(assets/images/red_2_pattern.png)",
-      "url(assets/images/blue_2_pattern.png)",
-      "url(assets/images/yellow_2_pattern.png)",
-      "url(assets/images/purple_1_pattern.png)", 
-      "url(assets/images/pink_2_pattern.png)", 
-      "url(assets/images/red_1_pattern.png)",
-      "url(assets/images/pink_4_pattern.png)",
-      "url(assets/images/blue_3_pattern.png)",
-      "url(assets/images/green_3_pattern.png)", 
-      "url(assets/images/pink_1_pattern.png)", 
-      "url(assets/images/green_2_pattern.png)",
-      "url(assets/images/yellow_1_pattern.png)",
-      "url(assets/images/blue_1_pattern.png)",
-      "url(assets/images/orange_1_pattern.png)", 
-      "url(assets/images/red_3_pattern.png)", 
-      "url(assets/images/purple_2_pattern.png)",
-      "url(assets/images/pink_3_pattern.png)"
-      ];
-      var backgroundIndex = 0;
+      // var backgroundArray = [
+      // "url(assets/images/green_1_pattern.png)", 
+      // "url(assets/images/orange_2_pattern.png)", 
+      // "url(assets/images/red_2_pattern.png)",
+      // "url(assets/images/blue_2_pattern.png)",
+      // "url(assets/images/yellow_2_pattern.png)",
+      // "url(assets/images/purple_1_pattern.png)", 
+      // "url(assets/images/pink_2_pattern.png)", 
+      // "url(assets/images/red_1_pattern.png)",
+      // "url(assets/images/pink_4_pattern.png)",
+      // "url(assets/images/blue_3_pattern.png)",
+      // "url(assets/images/green_3_pattern.png)", 
+      // "url(assets/images/pink_1_pattern.png)", 
+      // "url(assets/images/green_2_pattern.png)",
+      // "url(assets/images/yellow_1_pattern.png)",
+      // "url(assets/images/blue_1_pattern.png)",
+      // "url(assets/images/orange_1_pattern.png)", 
+      // "url(assets/images/red_3_pattern.png)", 
+      // "url(assets/images/purple_2_pattern.png)",
+      // "url(assets/images/pink_3_pattern.png)"
+      // ];
+      // var backgroundIndex = 0;
 
-    var rotateBackground = function(){
-    $("body").css("background-image", backgroundArray[backgroundIndex]);
-      backgroundIndex++;
-      if (backgroundIndex >= backgroundArray.length){
-          backgroundIndex = 0;
-    }
-}
+//     var rotateBackground = function(){
+//    $("#left").css("background", backgroundArray[backgroundIndex] );
+//     $("#right").css("background", backgroundArray[backgroundIndex + 1]);
+//     //$("#gifs-here").css("background", backgroundArray[backgroundIndex + 2])
+//       backgroundIndex++;
+//       if (backgroundIndex >= backgroundArray.length){
+//           backgroundIndex = 0;
+//       }
+// }
 
-$(document).ready( function(){
+// //$(document).ready( function(){
 
-    setInterval(rotateBackground, 7000);
+//    // setInterval(rotateBackground, 5000);
 
-});
+// });
