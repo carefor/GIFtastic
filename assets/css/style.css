@@ -137,6 +137,12 @@ label {
     color: rgb(11, 49, 92);
 }
 
+#gifs-here {
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+
 .rating-container {
     color: rgba(250, 126, 188, 0.479);
     letter-spacing: 2px;
@@ -145,7 +151,6 @@ label {
 }
 
 .gif-container {
-    float: left;
     padding: 15px;
-    margin: 0 auto;
+    display: inline-block;
 }
