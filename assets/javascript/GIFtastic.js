@@ -1,8 +1,6 @@
 "use strict";
 
-     
-      // Initial array of buttons
-      var giphys = [
+var giphys = [
       "The Office", 
       "Parks and Recreation", 
       "30 Rock", 
@@ -23,55 +21,26 @@
       var i;
       var randImage;
     
-      // Function for displaying button data
       function renderButtons() {
 
-        // Deleting the  buttons prior to adding new  buttons
-        // (this is necessary otherwise we will have repeat buttons)
         $("#giphys-view").empty();
 
-        // Looping through the array of buttons
         for (var i = 0; i < giphys.length; i++) {
 
-          // Then dynamically generating buttons for each butotn in the array.
-          // This code $("<button>") is all jQuery needs to create the start and end tag. (<button></button>)
           var b = $("<button class='giphy'>");
           b.addClass("button");
-          // Adding a data-attribute with a value of the button at index i
           b.attr("data-name", giphys[i]);
-          // Providing the button's text with a value of the button at index i
           b.text(giphys[i]);
-          // Adding the button to the HTML
           $("#giphys-view").append(b);
           $("#new-input").val("");
           $("#new-input").focus();
         }
-
       }
-
-      // This function handles events where one button is clicked
+      
       $("#add-new").on("click", function(event) {
-        // event.preventDefault() prevents the form from trying to submit itself.
-        // We're using a form so that the user can hit enter instead of clicking the button if they want
         event.preventDefault();
 
-        // This line will grab the text from the input box
         giphy = $("#new-input").val().trim();
-
-        // The button from the textbox is then added to our array
-
-
-        //****make case insensitive for button match
-       // for(var i = 0; i < giphys.length; i++) {
-       //    if(giphys[i].toLowerCase() === giphy.toLowerCase()) {
-       //    alert("That button already exists!");
-       //    $("#new-input").empty();
-       //    return;
-       //  }
-       //    } else if(giphy !== "") {
-       //    giphys.push(giphy);
-       //    console.log(giphys);
-       //  }
 
         if($.inArray(giphy, giphys) !== -1) {
           alert("That button already exists!");
@@ -81,39 +50,17 @@
           giphys.push(giphy);
           console.log(giphys);
         }
-        
 
-        // calling renderButtons which handles the processing of our button array
         renderButtons();
       });
 
-      // Calling the renderButtons function at least once to display the initial list of buttons
       renderButtons();
       
-
-      //***create remove button once figure out how
-      // $("#remove-new").on("click", function(event) {
-      //   event.preventDefault();
-
-
-
-      // const delegatedTarget = document.getElementById("giphys-view");
-
-      // delegatedTarget.onclick = function(event) { 
-      //   let targetButton = event.target.closest(".giphy"); 
-      //     if(!targetButton) return;
-      //     if(!delegatedTarget.contains(targetButton)) return; 
-
-      // console.log("event.target: " + event.target);
-      // console.log("event.currentTarget: " + event.currentTarget); 
-
       $("#giphys-view").on("click", ".giphy", function() { // Attaches event listener function
 
-          $("#gifs-here").empty();
+        $("#gifs-here").empty();
 
         var searchSubject = $(this).attr("data-name");
-
-        // removing white space between two-word strings, replacing with a "+"
         var searchSubjectEdited = searchSubject.replace(/ /g, "+");
         console.log("The subject searched is: " + searchSubjectEdited);
 
@@ -125,7 +72,6 @@
             method: "GET"
         })
 
-     // when the call is complete the response will be pulled
         .done(function(response) {
           console.log(response);
 
@@ -149,7 +95,6 @@
             $(gifDiv).append(p);
             $(gifDiv).append(actualImage);
             $("#gifs-here").prepend(gifDiv);
-
           }    
       });
     });
@@ -158,7 +103,6 @@
         console.log("clicked");
 
         var state = $(this).attr("data-state");
-          
                 
         if (state === "still") {
           $(this).attr("src", $(this).attr("data-animate"));
@@ -168,9 +112,6 @@
           $(this).attr("data-state", "still");
         }
       });
-          
-
-      
 
       var backgroundArray = [
       "url(assets/images/colorful_pattern_1.jpeg)",
@@ -201,7 +142,7 @@
       "url(assets/images/green_1_pattern.png)", 
       "url(assets/images/orange_2_pattern.png)"
       ];
-      var backgroundIndex = 0;
+    var backgroundIndex = 0;
 
     var rotateBackground = function(){
     $(".rating-container").css("background", backgroundArray[backgroundIndex]);
@@ -214,7 +155,5 @@
 }
 
 $(document).ready( function(){
-
    setInterval(rotateBackground, 5000);
-
 });

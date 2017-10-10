@@ -40,6 +40,7 @@ header {
     0% {background-position: right bottom;}
     100% {background-position: left top;}
 }
+
 @-moz-keyframes travelRainbow {
     0% {background-position: right bottom;}
     100% {background-position: left top;}
@@ -167,7 +168,6 @@ label {
     -ms-transform: scale(1.3);
     transform: scale(1.3);
 }
-
 
 .shake:active {
     animation: shake .5s ease-in-out;
