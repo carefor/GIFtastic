@@ -145,6 +145,7 @@ label {
 
 .rating-container {
     color: black;
+    text-shadow: 2px 2px 5px #5A6063;
     background: white;
     letter-spacing: 2px;
     padding: 5px;

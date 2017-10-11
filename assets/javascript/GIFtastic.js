@@ -115,39 +115,39 @@ var giphys = [
 
       var backgroundArray = [
       "url(assets/images/colorful_pattern_1.jpeg)",
-      "url(assets/images/pink_1_pattern.png)", 
-      "url(assets/images/purple_1_pattern.png)", 
+      "url(assets/images/gradient_pattern_1.jpg)", 
+      "url(assets/images/gradient_pattern_2.jpg)", 
       "url(assets/images/colorful_pattern_2.png)",
-      "url(assets/images/pink_4_pattern.png)",
-      "url(assets/images/green_3_pattern.png)",
+      "url(assets/images/gradient_pattern_3.jpg)",
+      "url(assets/images/gradient_pattern_4.jpg)",
       "url(assets/images/colorful_pattern_3.jpeg)",
-      "url(assets/images/yellow_2_pattern.png)",
-      "url(assets/images/blue_3_pattern.png)",
+      "url(assets/images/gradient_pattern_5.jpg)",
+      "url(assets/images/gradient_pattern_6.jpg",
       "url(assets/images/colorful_pattern_4.jpg)",
-      "url(assets/images/pink_2_pattern.png)", 
-      "url(assets/images/red_1_pattern.png)",
+      "url(assets/images/gradient_pattern_7.jpg)", 
+      "url(assets/images/gradient_pattern_8.jpg)",
       "url(assets/images/colorful_pattern_5.jpg)", 
-      "url(assets/images/blue_2_pattern.png)",     
-      "url(assets/images/green_2_pattern.png)",
+      "url(assets/images/gradient_pattern_9.jpg)",     
+      "url(assets/images/gradient_pattern_10.jpg)",
       "url(assets/images/colorful_pattern_6.jpeg)",
-      "url(assets/images/yellow_1_pattern.png)",
-      "url(assets/images/blue_1_pattern.png)",
+      "url(assets/images/gradient_pattern_11.jpg)",
+      "url(assets/images/gradient_pattern_11.jpg)",
       "url(assets/images/colorful_pattern_7.jpg)",
-      "url(assets/images/orange_1_pattern.png)", 
-      "url(assets/images/red_3_pattern.png)", 
+      "url(assets/images/gradient_pattern_12.jpg)", 
+      "url(assets/images/gradient_pattern_13.jpg)", 
       "url(assets/images/colorful_pattern_8.jpg)",
-      "url(assets/images/red_2_pattern.png)",
-      "url(assets/images/pink_3_pattern.png)",
+      "url(assets/images/gradient_pattern_14.jpg)",
+      "url(assets/images/gradient_pattern_15.jpg)",
       "url(assets/images/colorful_pattern_9.jpeg)",
-      "url(assets/images/green_1_pattern.png)", 
-      "url(assets/images/orange_2_pattern.png)"
+      "url(assets/images/gradient_pattern_16.jpg)", 
+      "url(assets/images/gradient_pattern_17.jpg)"
       ];
     var backgroundIndex = 0;
 
     var rotateBackground = function(){
-    $(".rating-container").css("background", backgroundArray[backgroundIndex]);
-    $(".gif-container").css("background", backgroundArray[backgroundIndex + 1]);
-    $(".gif").css("background", backgroundArray[backgroundIndex + 2]);
+    $(".gif").css("background", backgroundArray[backgroundIndex]);
+    $(".rating-container").css("background", backgroundArray[backgroundIndex + 2]);
+    $(".gif-container").css("background", backgroundArray[backgroundIndex + 5]);
       backgroundIndex++;
       if (backgroundIndex >= backgroundArray.length){
           backgroundIndex = 0;
