@@ -48,7 +48,6 @@ var giphys = [
           return;
         } else if(giphy !== "") {
           giphys.push(giphy);
-          console.log(giphys);
         }
 
         renderButtons();
@@ -56,13 +55,12 @@ var giphys = [
 
       renderButtons();
       
-      $("#giphys-view").on("click", ".giphy", function() { // Attaches event listener function
+      $("#giphys-view").on("click", ".giphy", function() {
 
         $("#gifs-here").empty();
 
         var searchSubject = $(this).attr("data-name");
         var searchSubjectEdited = searchSubject.replace(/ /g, "+");
-        console.log("The subject searched is: " + searchSubjectEdited);
 
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchSubjectEdited + 
                       "&api_key=79nYgjB20sOjRJaXUazd5e3YY1o6DQ5e&rating=pg-13&limit=10";
@@ -73,13 +71,10 @@ var giphys = [
         })
 
         .done(function(response) {
-          console.log(response);
 
           results = response.data;
 
           for (i = 0; i < results.length; i++) {
-
-            console.log(results[i]);
 
             var gifDiv = $("<div class='gif-container grow shake'>");
             var rating = results[i].rating;
@@ -100,7 +95,6 @@ var giphys = [
     });
 
       $("#gifs-here").on("click", ".gif", function () {
-        console.log("clicked");
 
         var state = $(this).attr("data-state");
                 
