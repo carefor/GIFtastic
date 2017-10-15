@@ -71,7 +71,6 @@ var giphys = [
         })
 
         .done(function(response) {
-
           results = response.data;
 
           for (i = 0; i < results.length; i++) {
@@ -149,5 +148,5 @@ var giphys = [
 }
 
 $(document).ready( function(){
-   setInterval(rotateBackground, 5000);
+   setInterval(rotateBackground, 4000);
 });
